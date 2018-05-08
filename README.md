@@ -1,4 +1,6 @@
 # Embedded dotCMS
+All you need to run dotCMS is this wrapper - it can be pointed to a dotCMS war file or to an exploded dotCMS webapp directory
+
 
 ## Building
 ./gradlew shadowJAr
