@@ -1,5 +1,9 @@
 # Embedded dotCMS
 
+## Building
+./gradlew shadowJAr
+
+
 ## Configuring
 
 DB config can be set as environmental variables or passed in as System properties
@@ -13,8 +17,9 @@ export db_username=dotcms
 export db_password=dotcms
 ```
 
-
 ## Running
+Embedded dotCMS can take a war or be pointed to an exploded war via the `-f` flag.
+
 
 `java -jar ./dotcms-all.jar -f ROOT.war`
 
