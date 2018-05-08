@@ -3,8 +3,11 @@ All you need to run dotCMS is this wrapper - it can be pointed to a dotCMS war f
 
 
 ## Building
-./gradlew shadowJAr
-
+To create an all in one jar to run dotCMS, call
+```
+./gradlew shadowJar
+```
+This will build the dotcms-all.jar in ./build/libs/
 
 ## Configuring
 
