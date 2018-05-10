@@ -17,7 +17,7 @@ public class DotCMSOptions extends OptionsBase {
             defaultValue = "ROOT.war")
     public String fileOrFolder;
 
-    @Option(name = "home", abbrev = 'h', help = "Sets the CATALINA_HOME", category = "startup", defaultValue = "catalina")
+    @Option(name = "home", abbrev = 'h', help = "Sets the DOTCMS_HOME", category = "startup", defaultValue = "dotcms")
     public String home;
 
 
