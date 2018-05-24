@@ -20,10 +20,20 @@ dependencies {
     compile     'mysql:mysql-connector-java:5.1.46'
     compile     'javax.mail:mail:1.4'
     compile     'javax.activation:activation:1.1'
-
+    compile     'com.fasterxml.jackson.core:jackson-databind:2.9.4'
     compile     'com.github.pcj:google-options:1.0.0'
-
-
+    /*
+    Jetty Jar Hell
+    compile     'org.eclipse.jetty:jetty-server:9.4.10.v20180503'
+    compile     'org.eclipse.jetty:jetty-servlet:9.4.10.v20180503'
+    compile     'org.eclipse.jetty:jetty-webapp:9.4.10.v20180503'
+    compile     'org.eclipse.jetty:jetty-util:9.4.10.v20180503'
+    compile     'org.eclipse.jetty:jetty-servlets:9.4.10.v20180503'    
+    compile     'org.eclipse.jetty:jetty-jsp:9.3.0.M1' 
+    compile     'org.eclipse.jetty:jetty-http:9.4.10.v20180503' 
+    compile     'org.eclipse.jetty:jetty-jmx:9.4.10.v20180503' 
+    compile     'org.eclipse.jetty:jetty-annotations:9.4.10.v20180503' 
+    */
 }
 
 jar {
