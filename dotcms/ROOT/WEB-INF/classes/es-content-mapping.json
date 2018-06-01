@@ -1,0 +1,90 @@
+{
+    "content": {
+        "date_detection": true,
+        "dynamic_date_formats": [
+            "yyyy-MM-dd'T'HH:mm:ss||MMM d, yyyy hh:mm:ss aaa||yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis"
+        ],
+        "dynamic_templates": [
+            {
+                "template_1": {
+                    "match": "*_dotraw",
+                    "mapping": {
+                        "type":  "keyword",
+                        "ignore_above": 8191
+                    }
+                }
+            },
+            {
+                "textmapping": {
+                    "match": "*_text",
+                    "mapping": {
+                        "type": "text"
+                    }
+                }
+            },
+            {
+                "ordermapping": {
+                    "match": "*-order",
+                    "mapping": {
+                        "type": "keyword"
+                    }
+                }
+            },
+            {
+                "strings_as_dates": {
+                    "match": "originalstartdate||recurrencestart||recurrenceend",
+                    "mapping": {
+                        "type": "date",
+                        "ignore_malformed": true
+                    }
+                }
+            },
+            {
+                "datemapping": {
+                    "mapping": {
+                        "ignore_malformed": true
+                    },
+                    "match_mapping_type": "date"
+                }
+            },
+            {
+                "geomapping": {
+                    "match": "*latlon",
+                    "mapping": {
+                        "type": "geo_point",
+                        "doc_values": true 
+                    }
+                }
+            },
+            {
+                "geomapping_2": {
+                    "match": "*latlong",
+                    "mapping": {
+                        "type": "geo_point",
+                        "doc_values": true 
+                    }
+                }
+            },
+            {
+                "tags" : {
+                    "match": "tags",
+                    "mapping": {
+                        "type": "keyword",
+                        "doc_values": true
+                    }
+                }
+            },
+            {
+                "textmapping": {
+                    "match_mapping_type": "string",
+                    "mapping": {
+                        "analyzer": "whitespace",
+                        "search_analyzer": "whitespace",
+                        "store": "false",
+                        "type": "text"
+                    }
+                }
+            }
+        ]
+    }
+}

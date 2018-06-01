@@ -8,7 +8,7 @@ import com.google.devtools.common.options.OptionsBase;
 
 public class DotCMSOptions extends OptionsBase {
 
-  public File DOTCMS_HOME,ASSET_REAL_PATH,DYNAMIC_CONTENT_PATH,CONFIG_PATH,WEB_ROOT;
+  public File DOTCMS_HOME,ASSET_REAL_PATH,DYNAMIC_CONTENT_PATH,CONFIG_PATH,WEB_ROOT,TMP_PATH;
 
   @Option(name = "host", abbrev = 'o', help = "The server host.", category = "startup", defaultValue = "localhost")
   public String host;
@@ -55,8 +55,10 @@ public class DotCMSOptions extends OptionsBase {
     this.ASSET_REAL_PATH = new File(this.getString("ASSET_REAL_PATH", DOTCMS_HOME.getAbsolutePath() + File.separator + "assets"));
     this.DYNAMIC_CONTENT_PATH = new File(this.getString("DYNAMIC_CONTENT_PATH", DOTCMS_HOME.getAbsolutePath() + File.separator + "dotsecure"));
     this.CONFIG_PATH = new File(this.getString("CONFIG_PATH", DOTCMS_HOME.getAbsolutePath() + File.separator + "config"));
-    CONFIG_PATH.mkdirs();
-    ASSET_REAL_PATH.mkdirs();
+    this.TMP_PATH = new File(this.getString("TMP_PATH", DOTCMS_HOME.getAbsolutePath() + File.separator + "webapps"));
+    this.TMP_PATH.mkdirs();
+    this.CONFIG_PATH.mkdirs();
+    this.ASSET_REAL_PATH.mkdirs();
     
     
 
@@ -71,6 +73,7 @@ public class DotCMSOptions extends OptionsBase {
     System.out.println("ASSET_REAL_PATH      :" + this.ASSET_REAL_PATH.getAbsolutePath());
     System.out.println("CONFIG_PATH          :" + this.CONFIG_PATH.getAbsolutePath());
     System.out.println("DYNAMIC_CONTENT_PATH :" + this.DYNAMIC_CONTENT_PATH.getAbsolutePath());
+    System.out.println("TMP_PATH             :" + this.TMP_PATH.getAbsolutePath());
     System.out.println("--------------------------------------------------------------------------------------");
     
     return this;

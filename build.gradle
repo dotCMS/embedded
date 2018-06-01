@@ -38,7 +38,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes "Main-Class": "com.dotcms.embedded.StartDotCMS"
+        attributes "Main-Class": "com.dotcms.embedded.DotCMS"
     }
  
     from {

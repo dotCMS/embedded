@@ -11,7 +11,7 @@ import org.apache.tomcat.util.descriptor.web.ContextResource;
 import org.apache.tomcat.util.scan.StandardJarScanFilter;
 import org.apache.tomcat.util.scan.StandardJarScanner;
 
-public class StartTomcat implements DotStarter {
+public class TomcatStarter implements DotStarter {
 
 
   @Override

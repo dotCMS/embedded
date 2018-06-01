@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<title>dotCMS Configuration</title>
+
+</head>
+
+<body>
+
+	<app>HEllo!</app>
+	<style>
+		.formBody {
+			width: 800px;
+			margin: auto;
+			background: #eeeeee;
+			padding: 10px;
+		}
+
+		.formRow {
+			display: block;
+			clear: both;
+		}
+
+		.formLabel {
+			width: 200px;
+			text-align: right;
+			float: left;
+		}
+
+		.formInputDiv {
+			width: 200px;
+			text-align: right;
+			float: left;
+		}
+	</style>
+
+
+
+
+	<form id="dotCMSSetupForm" method="POST" action="/updateConfig">
+		<div class="formBody">
+			<div class="formRow">
+				<div class="formLabel">Admin Password:</div>
+				<div class="formInputDiv">
+					<input name="password" type="password">
+				</div>
+
+			</div>
+			<div class="formRow">
+				<div class="formLabel">Confirm:</div>
+				<div class="formInputDiv">
+					<input name="password2" type="password">
+				</div>
+			</div>
+		</div>
+
+	</form>
+
+</body>
+
+</html>

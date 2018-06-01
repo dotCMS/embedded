@@ -9,7 +9,7 @@ import org.eclipse.jetty.webapp.Configuration;
 import org.eclipse.jetty.webapp.WebAppContext;
 
 */
-public class StartJetty implements DotStarter{
+public class JettyStarter implements DotStarter{
 
   @Override
   public void run(DotCMSOptions options) {
